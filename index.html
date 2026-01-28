@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Назва курсу/продукту] — Media</title>
+  <meta name="description" content="[Короткий опис лендінгу 150–160 символів]" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">MEDIA</a>
+
+      <nav class="nav">
+        <a href="#packages">Пакети</a>
+        <a href="#benefits">Переваги</a>
+        <a href="#join">Запис</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+
+      <a class="btn btn--primary" href="#join">Записатися</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>[Головний заголовок: що це за курс/послуга]</h1>
+          <p class="lead">
+            [Підзаголовок: для кого та який результат людина отримає]
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#join">Долучитися</a>
+            <a class="btn btn--ghost" href="#packages">Переглянути пакети</a>
+          </div>
+
+          <div class="note">
+            <strong>Підказка:</strong> тут можна коротко написати про дедлайни/старт/формат.
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="media-card">
+            <img src="./assets/hero.png" alt="Ілюстрація" onerror="this.style.display='none'" />
+            <div class="media-card__placeholder">
+              <span>Додай ./assets/img/hero.png</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section">
+      <div class="container">
+        <h2>Пакети участі</h2>
+        <p class="muted">Обери формат, який підходить саме тобі.</p>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__head">
+              <h3>Пакет A</h3>
+              <div class="price">[ціна]</div>
+            </div>
+            <ul class="list">
+              <li>[Пункт 1: наприклад, онлайн-заняття]</li>
+              <li>[Пункт 2: записи на X часу]</li>
+              <li>[Пункт 3: домашні завдання]</li>
+              <li>[Пункт 4: матеріали/презентації]</li>
+              <li>[Пункт 5: доступ до спільноти]</li>
+            </ul>
+            <a class="btn btn--primary btn--full" href="#join">Долучитися</a>
+          </article>
+
+          <article class="card card--highlight">
+            <div class="badge">Рекомендовано</div>
+            <div class="card__head">
+              <h3>Пакет B</h3>
+              <div class="price">[ціна]</div>
+            </div>
+            <ul class="list">
+              <li>[Усе з пакету A]</li>
+              <li>[Додаткові сесії Q&A]</li>
+              <li>[Підтримка/перевірка]</li>
+              <li>[Тест/сертифікат (якщо є)]</li>
+            </ul>
+            <a class="btn btn--primary btn--full" href="#join">Долучитися</a>
+          </article>
+
+          <article class="card">
+            <div class="card__head">
+              <h3>Пакет C</h3>
+              <div class="price">[ціна]</div>
+            </div>
+            <ul class="list">
+              <li>[Для групи/пари/двох місць]</li>
+              <li>[Спецумови доступу]</li>
+              <li>[Додаткові бонуси]</li>
+            </ul>
+            <a class="btn btn--primary btn--full" href="#join">Долучитися</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section section--alt">
+      <div class="container">
+        <h2>Умови та бонуси</h2>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Знижка / спецумови</h3>
+            <p class="muted">[Наприклад: при оплаті до певної дати — кращі умови]</p>
+          </article>
+
+          <article class="card">
+            <h3>Розширений доступ</h3>
+            <p class="muted">[Скільки часу доступні записи/чат/матеріали]</p>
+          </article>
+
+          <article class="card">
+            <h3>Додаткові матеріали</h3>
+            <p class="muted">[Вебінари, чек-листи, шаблони, бонусні уроки тощо]</p>
+          </article>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="bonus">
+          <div class="bonus__text">
+            <h3>Що ще входить</h3>
+            <ul class="list">
+              <li>[Бонус 1]</li>
+              <li>[Бонус 2]</li>
+              <li>[Бонус 3]</li>
+            </ul>
+          </div>
+
+          <div class="bonus__media">
+            <div class="media-card">
+              <img src="./assets/img/bonus.png" alt="Ілюстрація" onerror="this.style.display='none'" />
+              <div class="media-card__placeholder">
+                <span>Додай ./assets/img/bonus.png</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN FORM -->
+    <section id="join" class="section">
+      <div class="container">
+        <h2>Долучайтеся зараз</h2>
+        <p class="muted">Заповніть форму — ми зв’яжемося з вами.</p>
+
+        <div class="form-wrap">
+          <!-- Для статичного сайту потрібен сервіс/бекенд для відправки.
+               Поки лишаємо без action, підключимо на етапі деплою. -->
+          <form class="form" id="leadForm">
+            <label class="field">
+              <span>ПІБ *</span>
+              <input name="fullName" required placeholder="Ім’я та прізвище" />
+            </label>
+
+            <label class="field">
+              <span>Телефон *</span>
+              <input name="phone" required placeholder="+380..." />
+            </label>
+
+            <label class="field">
+              <span>Email *</span>
+              <input name="email" type="email" required placeholder="name@example.com" />
+            </label>
+
+            <button class="btn btn--primary btn--full" type="submit">Надіслати</button>
+
+            <p class="tiny muted">
+              Надсилаючи форму, ви погоджуєтесь із
+              <a href="./policies/privacy.html">Політикою конфіденційності</a>.
+            </p>
+
+            <div class="toast" id="toast" hidden>
+              <strong>Готово!</strong> Запит збережено локально (демо). Підключимо відправку на наступному кроці.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts" class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="logo logo--small">MEDIA</div>
+        <p class="tiny muted">© <span id="year"></span> [Назва/ФОП/Компанія]</p>
+        <p class="muted tiny">Email: [email] • Місто/Адреса: [адреса]</p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <div class="footer__title">Правова інформація</div>
+          <a href="./policies/privacy.html">Політика конфіденційності</a>
+          <a href="./policies/returns.html">Політика повернень</a>
+          <a href="./policies/public-offer.html">Публічна оферта</a>
+          <a href="./policies/installments.html">Покупка частинами</a>
+          <a href="./policies/terms.html">Умови користування</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
