@@ -6,37 +6,318 @@
   <meta name="referrer" content="no-referrer" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Оплата підписки</title>
-  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="stylesheet" href="./pay.css" />
 </head>
 <body>
-  <main class="section">
-    <div class="container" style="max-width: 720px;">
-      <a href="./index.html" class="logo" style="display:inline-block; margin-bottom: 16px;">MEDIA</a>
+  <!-- HEADER -->
+  <header class="pay-header">
+    <div class="container pay-header__inner">
+      <div class="pay-logo">Логотип</div>
+    </div>
+  </header>
 
-      <h1>Оплата підписки</h1>
-      <p class="muted" id="subtitle">Перевіряємо дані платежу…</p>
+  <main>
+    <!-- HERO  -->
+    <section class="hero container">
+      <h1 class="typo-h1 hero__title">Оберіть свій тариф підписки</h1>
+      <p class="typo-l hero__desc">
+        AVS 365 допомагає легко орієнтуватися у змінах, швидко розібратися у
+        складних питаннях, зростати професійно та отримувати підтримку навіть у
+        нестандартних ситуаціях. Перегляньте ключові відмінності між тарифами та
+        оберіть найкращий саме для вас!
+      </p>
+    </section>
 
-      <div class="card" style="margin-top: 16px;">
-        <div class="card__head">
-          <h3 id="pkgTitle">—</h3>
-          <div class="price" id="pkgPrice">—</div>
-        </div>
+    <!-- TARIFF CARD  -->
+    <section class="container section">
+      <div class="tariff-wrap">
+        <article id="tariffCard" class="tariff-card tariff-default">
+          <div id="badgeTop" class="tariff-badge tariff-badge--top" hidden>
+            <img src="/assets/badge-top.png" alt="" width="56" height="24" />
+          </div>
+          <div id="badgeFop" class="tariff-badge tariff-badge--fop" hidden>
+            <img src="/assets/badge-fop.png" alt="" width="107" height="24" />
+          </div>
 
-        <div class="divider"></div>
+          <h3 id="tariffTitle" class="typo-h2 tariff-title">—</h3>
+          <p id="tariffSubtitle" class="typo-s tariff-subtitle">—</p>
 
-        <button class="btn btn--primary btn--full" id="payBtn" disabled>
-          Завантаження…
-        </button>
+          <div class="tariff-pricebox">
+            <div id="tariffPrice" class="typo-h1 tariff-price">—</div>
+            <div id="tariffNote" class="typo-s tariff-note">—</div>
+            <div id="payHint" class="typo-s tariff-hint">Перевіряємо дані платежу…</div>
+          </div>
 
-        <p class="tiny muted" style="margin-top: 10px;">
-          Після натискання ви перейдете на сторінку оплати WayForPay.
-        </p>
+          <button id="payBtn" class="tariff-btn" type="button" disabled>
+            Завантаження…
+            <img id="payArrowWhite" src="/assets/arrow-right-white.svg" alt="" width="20" height="20" />
+            <img id="payArrowBlack" src="/assets/arrow-right-black.svg" alt="" width="20" height="20" hidden />
+          </button>
 
-        <div class="toast" id="errorBox" hidden style="margin-top:12px;">
-          <strong>Помилка:</strong> <span id="errorText"></span>
+          <ul id="featuresList" class="tariff-features">
+          </ul>
+
+          <!-- expert-plus block  -->
+          <div id="expertPlusBlock" class="expert-plus" hidden>
+            <img src="/assets/bb-plus.svg" alt="" width="24" height="24" />
+            <p class="typo-s">
+              Відповіді експертів на ваші питання <span class="up">до 7 робочих днів</span>
+            </p>
+          </div>
+
+          <!-- TOP extras -->
+          <div id="topExtras" class="tariff-extras" hidden>
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/expert-list.png" alt="" width="24" height="24" />
+              </span>
+              <p class="extra-text extra-text--yellow">
+                Відповіді експертів на ваші питання <span class="up">до 2 робочих днів</span>
+              </p>
+            </div>
+
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/course-list.png" alt="" width="24" height="24" />
+              </span>
+              <div class="extra-text extra-text--yellow">
+                <p class="fw600">5 комплексних курсів:</p>
+                <ul class="extra-list">
+                  <li>Бухгалтер в ІТ</li>
+                  <li>Бухгалтерія ФОП</li>
+                  <li>Управлінський облік</li>
+                  <li>Бухгалтер на фрілансі 4.0</li>
+                  <li>QuickBooks</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/cert-list.png" alt="" width="24" height="24" />
+              </span>
+              <p class="extra-text extra-text--yellow fw600">
+                Сертифікати про проходження навчання
+              </p>
+            </div>
+          </div>
+
+          <!-- FOP extras -->
+          <div id="fopExtras" class="tariff-extras" hidden>
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/expert-list.png" alt="" width="24" height="24" />
+              </span>
+              <p class="extra-text extra-text--blue">
+                Відповіді експертів на ваші питання <span class="up">до 2 робочих днів</span>
+              </p>
+            </div>
+
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/course-list.png" alt="" width="24" height="24" />
+              </span>
+              <div class="extra-text extra-text--blue">
+                <p class="fw600">5 комплексних курсів:</p>
+                <ul class="extra-list">
+                  <li>ФОП на Загальній системі 2.0</li>
+                  <li>(П)РРО для ФОП 2.0</li>
+                  <li>Бухгалтерія ФОП</li>
+                  <li>Бюті-ФОП</li>
+                  <li>Бухгалтер на фрілансі 4.0</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="extra-row">
+              <span class="extra-ico">
+                <img src="/assets/cert-list.png" alt="" width="24" height="24" />
+              </span>
+              <p class="extra-text extra-text--blue fw600">
+                Сертифікати про проходження навчання
+              </p>
+            </div>
+          </div>
+
+          <div id="errorBox" class="toast" hidden>
+            <strong>Помилка:</strong> <span id="errorText"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BONUS MATERIALS  -->
+    <section class="container section">
+      <div class="bonus">
+        <img class="bonus__bg" src="/assets/free-banner.svg" alt="" />
+        <div class="bonus__grid">
+          <h2 class="typo-h1 bonus__title">Бонусні матеріали для всіх</h2>
+
+          <div class="bonus__slots" id="bonusSlots">
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="container section">
+      <h2 class="typo-h1 section-title">Переваги платформи</h2>
+
+      <div class="benefits-grid">
+        <div class="benefit-card benefit-card--big">
+          <div>
+            <p class="typo-h3 fw700">Інтелектуальний пошук</p>
+            <p class="typo-l muted">
+              За секунди отримайте відповідь за Вашим запитом. 40 000+ матеріалів:
+              відео, коментарі, шаблони, курси — усе в одному місці
+            </p>
+          </div>
+          <div class="benefit-ico">
+            <img src="/assets/video.webp" alt="video" width="140" height="140" />
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div>
+            <p class="typo-h3 fw700">Регулярні оновлення</p>
+            <p class="typo-l muted">
+              Зміни в законодавстві тепер без стресу. Розбори одразу після оновлень
+            </p>
+          </div>
+          <div class="benefit-ico">
+            <img src="/assets/materials.webp" alt="materials" width="140" height="140" />
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div>
+            <p class="typo-h3 fw700">Календар планування</p>
+            <p class="typo-l muted">
+              Зручний календар. Стежте за вебінарами та додавайте їх у свій графік
+            </p>
+          </div>
+          <div class="benefit-ico">
+            <img src="/assets/access.webp" alt="access" width="140" height="140" />
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div>
+            <p class="typo-h3 fw700">Експертна підтримка</p>
+            <p class="typo-l muted">
+              Маєте питання? Отримайте експертну відповідь на сесії або в чаті
+            </p>
+          </div>
+          <div class="benefit-ico">
+            <img src="/assets/community.webp" alt="community" width="140" height="140" />
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div>
+            <p class="typo-h3 fw700">Особистий консультант</p>
+            <p class="typo-l muted">
+              Допоможе з доступом і підкаже, як отримати максимум користі від сервісу
+            </p>
+          </div>
+          <div class="benefit-ico">
+            <img src="/assets/certificate.webp" alt="certificate" width="140" height="140" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="container section">
+      <h2 class="typo-h1 section-title">Як оформити підписку?</h2>
+
+      <div class="roadmap">
+        <div class="roadmap__card roadmap__dark">
+          <div class="roadmap__pill">Крок 1</div>
+          <h3 class="roadmap__title">Обрати</h3>
+          <p class="roadmap__text">Оберіть пакет та зручну форму оплати: карткою або за рахунком</p>
+        </div>
+
+        <div class="roadmap__connector">
+          <img class="d-md" src="/assets/dashes-2.png" alt="" width="16" height="2" />
+          <img class="d-2xl" src="/assets/dashes-3.png" alt="" width="40" height="2" />
+          <img class="d-sm" src="/assets/dashes-2.png" alt="" width="16" height="2" />
+        </div>
+
+        <div class="roadmap__card roadmap__mid">
+          <div class="roadmap__pill">Крок 2</div>
+          <h3 class="roadmap__title">Заповнити</h3>
+          <p class="roadmap__text">Внесіть свої дані для отримання доступу</p>
+        </div>
+
+        <div class="roadmap__connector">
+          <img class="d-md" src="/assets/dashes-2.png" alt="" width="16" height="2" />
+          <img class="d-2xl" src="/assets/dashes-3.png" alt="" width="40" height="2" />
+          <img class="d-sm" src="/assets/dashes-2.png" alt="" width="16" height="2" />
+        </div>
+
+        <div class="roadmap__card roadmap__light">
+          <div class="roadmap__pill">Крок 3</div>
+          <h3 class="roadmap__title">Готово!</h3>
+          <p class="roadmap__text">Передплата активована. На пошті вже чекаю інструкція користування</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="container section">
+      <div class="reviews-head">
+        <button id="reviewsPrev" class="round-btn" type="button" aria-label="Попередній відгук">
+          <img src="/assets/arrow-left.svg" alt="" width="24" height="24" />
+        </button>
+
+        <h2 class="typo-h2 fw700">Відгуки</h2>
+
+        <button id="reviewsNext" class="round-btn" type="button" aria-label="Наступний відгук">
+          <span class="rot180">
+            <img src="/assets/arrow-left.svg" alt="" width="24" height="24" />
+          </span>
+        </button>
+      </div>
+
+      <div class="reviews-viewport">
+        <div id="reviewsTrack" class="reviews-track"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container section">
+      <h2 class="typo-h1 section-title">Часті запитання</h2>
+      <div id="faqList" class="faq-list"></div>
+    </section>
+
+    <footer class="pay-footer">
+  <div class="container pay-footer__inner">
+    <div class="pay-footer__grid">
+      <div class="pay-footer__col pay-footer__col--left">
+        <p>© Сервіс експертної підтримки бухгалтера</p>
+        <p>Всі права захищені.</p>
+      </div>
+
+      <div class="pay-footer__col pay-footer__col--mid">
+        <p>ФОП Беженов · ІПН 00000000</p>
+        <p>м. Київ, вул. Ааааааааааа, 1а</p>
+      </div>
+
+      <div class="pay-footer__col pay-footer__col--right">
+        <div class="pay-footer__title">Правова інформація</div>
+
+        <a class="pay-footer__link" href="./policies/installments.html">Покупка частинами</a>
+        <a class="pay-footer__link" href="./policies/returns.html">Політика повернень</a>
+        <a class="pay-footer__link" href="./policies/public-offer.html">Публічна оферта</a>
+        <a class="pay-footer__link" href="./policies/privacy.html">Політика конфіденційності</a>
+        <a class="pay-footer__link" href="./policies/terms.html">Умови користування</a>
+      </div>
     </div>
+  </div>
+</footer>
+
   </main>
 
   <script src="./pay.js"></script>
