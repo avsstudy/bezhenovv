@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Оплата підписки</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="section">
+    <div class="container" style="max-width: 720px;">
+      <a href="./index.html" class="logo" style="display:inline-block; margin-bottom: 16px;">MEDIA</a>
+
+      <h1>Оплата підписки</h1>
+      <p class="muted" id="subtitle">Перевіряємо дані платежу…</p>
+
+      <div class="card" style="margin-top: 16px;">
+        <div class="card__head">
+          <h3 id="pkgTitle">—</h3>
+          <div class="price" id="pkgPrice">—</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button class="btn btn--primary btn--full" id="payBtn" disabled>
+          Завантаження…
+        </button>
+
+        <p class="tiny muted" style="margin-top: 10px;">
+          Після натискання ви перейдете на сторінку оплати WayForPay.
+        </p>
+
+        <div class="toast" id="errorBox" hidden style="margin-top:12px;">
+          <strong>Помилка:</strong> <span id="errorText"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./pay.js"></script>
+</body>
+</html>
